@@ -1,0 +1,528 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="MXHVAC - Sistema HVAC y Climatización Industrial">
+	<!-- 1. HERO SECTION -->
+	<section id="hero" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-secondary">
+		<!-- Background Image (absolute, full width behind the grid) -->
+		<div class="absolute inset-0 w-full h-full z-0">
+			<img src="/img_portada.webp" alt="Instalación Industrial HVAC VRF a Gas Natural" class="w-full h-full object-cover object-center hero-img" />
+			<!-- Overlay oscuro degradado para centrado: Uniforme para legibilidad -->
+			<div class="absolute inset-0 bg-secondary/80 bg-gradient-to-t from-secondary via-transparent to-transparent"></div>
+		</div>
+
+		<!-- Content Overlay -->
+		<div class="relative z-10 flex flex-col items-center text-center px-6 md:px-16 lg:px-24 py-24 max-w-5xl mx-auto hero-content">
+			<span class="text-accent tracking-wider uppercase font-semibold text-sm md:text-base mb-4 hero-tag block">
+				Tecnología VRF a Gas Natural & Chillers
+			</span>
+			<h1 class="font-sans text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-8 text-white hero-title text-balance">
+				Sistema HVAC y Climatización Industrial: Soluciones Energéticas a Gas Natural para su Empresa
+			</h1>
+			<p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-10 max-w-3xl mx-auto hero-desc">
+				Implementamos sistemas de aire acondicionado industrial y proyectos llave en mano con tecnología VRF a gas natural, garantizando alta eficiencia, sustentabilidad y continuidad operativa con generación eléctrica en sitio.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-5 hero-cta justify-center w-full">
+				<a href="#contacto" class="inline-flex items-center justify-center px-8 py-4 bg-accent text-secondary font-bold rounded-full hover:bg-white transition-all shadow-[0_0_20px_rgba(0,210,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] hover:-translate-y-1 group">
+					<span>Cotizar Proyecto</span>
+					<i class="ph-bold ph-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+				</a>
+				<a href="#servicios" class="inline-flex items-center justify-center px-8 py-4 backdrop-glass border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all hover:-translate-y-1">
+					Explorar Servicios
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- 1.5. SOLUCIONES ESPECIALIZADAS -->
+	<section id="soluciones-especializadas" class="py-24 bg-white text-secondary relative z-10 border-b border-gray-100">
+		<div class="container mx-auto px-6">
+			<div class="text-center mb-16 max-w-3xl mx-auto">
+				<span class="text-accent tracking-wider uppercase font-semibold text-sm mb-4 block">Tecnología de Vanguardia</span>
+				<h2 class="text-3xl md:text-5xl font-bold mb-6">Soluciones Especializadas</h2>
+				<p class="text-gray-600 text-lg">Sistemas de alta eficiencia y cogeneración diseñados para reducir costos operativos y asegurar la continuidad.</p>
+			</div>
+
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+				<!-- Chillers de Absorción -->
+				<div class="relative rounded-2xl p-8 border border-transparent shadow-lg hover:shadow-2xl hover:border-accent/50 transition-all duration-500 group sol-card overflow-hidden flex flex-col justify-start">
+					<img src="/soluciones_especializadas/s1_chillers.png" alt="Chillers de Absorción" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-[#0A192F]/95 via-[#0A192F]/80 to-[#0A192F]/40 z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20 flex flex-col h-full">
+						<div class="w-14 h-14 bg-white/10 backdrop-glass rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 border border-white/10">
+							<i class="ph-duotone ph-snowflake text-3xl text-accent"></i>
+						</div>
+						<h3 class="text-2xl font-bold mb-6 text-white">Chillers de Absorción</h3>
+						<ul class="space-y-4">
+							<li class="flex items-start gap-3">
+								<i class="ph-bold ph-lightning text-accent mt-1 shrink-0"></i>
+								<div>
+									<span class="font-semibold text-white block">Fuente primaria de energía:</span>
+									<span class="text-gray-300 text-sm">Operación altamente eficiente mediante Fuego Directo, Agua Caliente, Vapor y Gases Calientes de Proceso.</span>
+								</div>
+							</li>
+							<li class="flex items-start gap-3">
+								<i class="ph-bold ph-chart-line-down text-accent mt-1 shrink-0"></i>
+								<div>
+									<span class="font-semibold text-white block">Ahorro de energía radical:</span>
+									<span class="text-gray-300 text-sm">Reduce drásticamente la demanda de capacidad eléctrica industrial al sustituir electricidad por energía térmica.</span>
+								</div>
+							</li>
+							<li class="flex items-start gap-3">
+								<i class="ph-bold ph-leaf text-accent mt-1 shrink-0"></i>
+								<div>
+									<span class="font-semibold text-white block">Sustentabilidad aplicada:</span>
+									<span class="text-gray-300 text-sm">Ideal para proyectos de climatización para hospitales y grandes complejos industriales que buscan reducir su huella de carbono.</span>
+								</div>
+							</li>
+							<li class="flex items-start gap-3">
+								<i class="ph-bold ph-arrows-merge text-accent mt-1 shrink-0"></i>
+								<div>
+									<span class="font-semibold text-white block">Versatilidad térmica:</span>
+									<span class="text-gray-300 text-sm">Permite el aprovechamiento de calor residual de procesos de manufactura para generar agua helada.</span>
+								</div>
+							</li>
+						</ul>
+						<div class="mt-auto pt-8">
+							<a href="#" class="inline-flex items-center gap-2 text-accent font-semibold hover:text-white transition-colors group/btn">
+								<i class="ph-bold ph-download-simple group-hover/btn:-translate-y-1 transition-transform"></i>
+								Descargar Ficha Técnica
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tecnología VRF -->
+				<div class="relative rounded-2xl p-8 border border-accent/20 shadow-lg hover:shadow-2xl hover:border-accent/70 transition-all duration-500 group sol-card overflow-hidden flex flex-col justify-start">
+					<img src="/soluciones_especializadas/s2_vrf.png" alt="Tecnología VRF" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-[#0A192F]/95 via-[#0A192F]/80 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<!-- Glow effect background -->
+					<div class="absolute top-0 right-0 w-48 h-48 bg-accent/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 z-10"></div>
+					<div class="relative z-20 flex flex-col h-full">
+						<div class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 backdrop-glass border border-white/20">
+							<i class="ph-duotone ph-wind text-3xl text-accent"></i>
+						</div>
+						<h3 class="text-2xl font-bold mb-6 text-white relative z-10">Tecnología VRF</h3>
+						<ul class="space-y-4 relative z-10">
+							<li class="flex items-start gap-3">
+								<i class="ph-bold ph-star text-accent mt-1 shrink-0"></i>
+								<div>
+									<span class="font-semibold text-white block">Innovación única:</span>
+									<span class="text-gray-300 text-sm">Sistema accionado por motor de combustión interna con fuente primaria de alimentación a Gas Natural (Único en el mercado y de la prestigiada marca Panasonic).</span>
+								</div>
+							</li>
+							<li class="flex items-start gap-3">
+								<i class="ph-bold ph-cpu text-accent mt-1 shrink-0"></i>
+								<div>
+									<span class="font-semibold text-white block">Eficiencia inteligente:</span>
+									<span class="text-gray-300 text-sm">Excelentes mejorías operando a carga parcial (Tecnología inverter) con una eficiencia sin igual en consumo de gas.</span>
+								</div>
+							</li>
+							<li class="flex items-start gap-3">
+								<i class="ph-bold ph-gear-fine text-accent mt-1 shrink-0"></i>
+								<div>
+									<span class="font-semibold text-white block">Ingeniería avanzada:</span>
+									<span class="text-gray-300 text-sm">Motor de Ciclo Miller de alta eficiencia con un arranque rápido de calefacción a bajas temperaturas.</span>
+								</div>
+							</li>
+							<li class="flex items-start gap-3">
+								<i class="ph-bold ph-fire text-accent mt-1 shrink-0"></i>
+								<div>
+									<span class="font-semibold text-white block">Cogeneración térmica:</span>
+									<span class="text-gray-300 text-sm">Capacidad de generar adicionalmente agua caliente durante los procesos simultáneos de calefacción y refrigeración.</span>
+								</div>
+							</li>
+						</ul>
+						<div class="mt-auto pt-8 relative z-10">
+							<a href="#" class="inline-flex items-center gap-2 text-accent font-semibold hover:text-white transition-colors group/btn">
+								<i class="ph-bold ph-download-simple group-hover/btn:-translate-y-1 transition-transform"></i>
+								Descargar Ficha Técnica
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Motogeneradores y Sistemas de Energía -->
+				<div class="relative rounded-2xl p-8 border border-transparent shadow-lg hover:shadow-2xl hover:border-accent/50 transition-all duration-500 group sol-card overflow-hidden flex flex-col justify-start">
+					<img src="/soluciones_especializadas/s3_moto.png" alt="Motogeneradores y Energía" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-[#0A192F]/95 via-[#0A192F]/80 to-[#0A192F]/40 z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20 flex flex-col h-full">
+						<div class="w-14 h-14 bg-white/10 backdrop-glass rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 border border-white/10">
+							<i class="ph-duotone ph-engine text-3xl text-accent"></i>
+						</div>
+						<h3 class="text-2xl font-bold mb-6 text-white">Motogeneradores y Energía</h3>
+						<ul class="space-y-4">
+							<li class="flex items-start gap-3">
+								<i class="ph-bold ph-shield-check text-accent mt-1 shrink-0"></i>
+								<div>
+									<span class="font-semibold text-white block">Continuidad operativa:</span>
+									<span class="text-gray-300 text-sm">Soluciones basadas en motogeneradores de combustión interna para la generación de energía con gas natural.</span>
+								</div>
+							</li>
+							<li class="flex items-start gap-3">
+								<i class="ph-bold ph-plugs-connected text-accent mt-1 shrink-0"></i>
+								<div>
+									<span class="font-semibold text-white block">Infraestructura térmica complementaria:</span>
+									<span class="text-gray-300 text-sm">Integración perfecta con Calderas y Calentadores de agua industriales de alta eficiencia.</span>
+								</div>
+							</li>
+							<li class="flex items-start gap-3">
+								<i class="ph-bold ph-factory text-accent mt-1 shrink-0"></i>
+								<div>
+									<span class="font-semibold text-white block">Generación distribuida México:</span>
+									<span class="text-gray-300 text-sm">Permite establecer una planta de luz industrial autónoma en sitio para asegurar el suministro eléctrico continuo de su planta.</span>
+								</div>
+							</li>
+							<li class="flex items-start gap-3">
+								<i class="ph-bold ph-currency-dollar text-accent mt-1 shrink-0"></i>
+								<div>
+									<span class="font-semibold text-white block">Optimización de costos:</span>
+									<span class="text-gray-300 text-sm">Diseñados para mitigar las tarifas comerciales pico y asegurar estabilidad de voltaje.</span>
+								</div>
+							</li>
+						</ul>
+						<div class="mt-auto pt-8">
+							<a href="#" class="inline-flex items-center gap-2 text-accent font-semibold hover:text-white transition-colors group/btn">
+								<i class="ph-bold ph-download-simple group-hover/btn:-translate-y-1 transition-transform"></i>
+								Descargar Ficha Técnica
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 2. EQUIPAMIENTO PERIFÉRICO -->
+	<section id="equipamiento" class="py-24 bg-gray-50 text-secondary relative z-10">
+		<div class="container mx-auto px-6">
+			<div class="text-center mb-16 max-w-3xl mx-auto">
+				<span class="text-accent tracking-wider uppercase font-semibold text-sm mb-4 block">Distribución Inteligente</span>
+				<h2 class="text-3xl md:text-5xl font-bold mb-6">Equipamiento Periférico y Sistemas de Distribución</h2>
+				<p class="text-gray-600 text-lg">Soluciones completas para optimizar el rendimiento y eficiencia de sus instalaciones térmicas.</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 equipamiento-grid">
+				<!-- Tarjetas con fondo de imagen -->
+				<div class="relative p-8 rounded-xl shadow-sm hover:shadow-lg hover:border-accent border border-transparent transition-all duration-300 equip-card group overflow-hidden min-h-[320px] flex flex-col justify-end">
+					<img src="/soluciones_equipamiento/e1.png" alt="Unidades interiores VRF" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20">
+						<i class="ph-duotone ph-wind text-4xl text-accent mb-4 group-hover:-translate-y-1 transition-transform"></i>
+						<h3 class="text-xl font-bold mb-2 text-white">Unidades interiores para Tecnología VRF</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">Variedad de evaporadoras industriales de alta eficiencia adaptables a cualquier espacio arquitectónico.</p>
+					</div>
+				</div>
+
+				<div class="relative p-8 rounded-xl shadow-sm hover:shadow-lg hover:border-accent border border-transparent transition-all duration-300 equip-card group overflow-hidden min-h-[320px] flex flex-col justify-end">
+					<img src="/soluciones_equipamiento/e2.png" alt="Unidades agua helada" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20">
+						<i class="ph-duotone ph-drop text-4xl text-accent mb-4 group-hover:-translate-y-1 transition-transform"></i>
+						<h3 class="text-xl font-bold mb-2 text-white">Unidades interiores para agua helada</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">Equipos terminales (Fan & Coils y manejadoras compactas) diseñados para operar con sistema de agua helada.</p>
+					</div>
+				</div>
+
+				<div class="relative p-8 rounded-xl shadow-sm hover:shadow-lg hover:border-accent border border-transparent transition-all duration-300 equip-card group overflow-hidden min-h-[320px] flex flex-col justify-end">
+					<img src="/soluciones_equipamiento/e3.png" alt="Manejadoras de aire" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20">
+						<i class="ph-duotone ph-fan text-4xl text-accent mb-4 group-hover:-translate-y-1 transition-transform"></i>
+						<h3 class="text-xl font-bold mb-2 text-white">Manejadoras de aire</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">Unidades de tratamiento de aire a gran escala para asegurar la calidad del aire y ventilación en HVAC para manufactura.</p>
+					</div>
+				</div>
+
+				<div class="relative p-8 rounded-xl shadow-sm hover:shadow-lg hover:border-accent border border-transparent transition-all duration-300 equip-card group overflow-hidden min-h-[320px] flex flex-col justify-end">
+					<img src="/soluciones_equipamiento/e4.png" alt="Sistemas de bombeo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20">
+						<i class="ph-duotone ph-engine text-4xl text-accent mb-4 group-hover:-translate-y-1 transition-transform"></i>
+						<h3 class="text-xl font-bold mb-2 text-white">Sistemas de bombeo</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">Estaciones hidrónicas de bombeo optimizadas con variadores de velocidad para un transporte eficiente del agua.</p>
+					</div>
+				</div>
+
+				<div class="relative p-8 rounded-xl shadow-sm hover:shadow-lg hover:border-accent border border-transparent transition-all duration-300 equip-card group overflow-hidden min-h-[320px] flex flex-col justify-end">
+					<img src="/soluciones_equipamiento/e5.png" alt="Torres de enfriamiento" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20">
+						<i class="ph-duotone ph-thermometer text-4xl text-accent mb-4 group-hover:-translate-y-1 transition-transform"></i>
+						<h3 class="text-xl font-bold mb-2 text-white">Torres de enfriamiento</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">Suministramos torres de refrigeración y la clásica torre de enfriamiento de agua industrial para la disipación eficiente.</p>
+					</div>
+				</div>
+
+				<div class="relative p-8 rounded-xl shadow-sm hover:shadow-lg hover:border-accent border border-transparent transition-all duration-300 equip-card group overflow-hidden min-h-[320px] flex flex-col justify-end">
+					<img src="/soluciones_equipamiento/e6.png" alt="Tanques de expansión" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20">
+						<i class="ph-duotone ph-arrows-out text-4xl text-accent mb-4 group-hover:-translate-y-1 transition-transform"></i>
+						<h3 class="text-xl font-bold mb-2 text-white">Tanques de expansión</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">Dispositivos esenciales para absorber las variaciones de presión y garantizar la seguridad en redes hidrónicas cerradas.</p>
+					</div>
+				</div>
+
+				<div class="relative p-8 rounded-xl shadow-sm hover:shadow-lg hover:border-accent border border-transparent transition-all duration-300 equip-card group overflow-hidden min-h-[320px] flex flex-col justify-end">
+					<img src="/soluciones_equipamiento/e7.png" alt="Válvulas multipropósito" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20">
+						<i class="ph-duotone ph-faders text-4xl text-accent mb-4 group-hover:-translate-y-1 transition-transform"></i>
+						<h3 class="text-xl font-bold mb-2 text-white">Válvulas multipropósito</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">Componentes avanzados de balanceo dinámico, regulación y aislamiento del flujo de fluidos.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 3. NUESTROS SERVICIOS INTEGRALES -->
+	<section id="servicios" class="py-24 bg-secondary text-white relative">
+		<div class="container mx-auto px-6">
+			<div class="mb-16">
+				<span class="text-accent tracking-wider uppercase font-semibold text-sm mb-4 block">Portafolio</span>
+				<h2 class="text-3xl md:text-5xl font-bold mb-6">Nuestros Servicios Integrales</h2>
+			</div>
+
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+				<!-- Destacado: Proyectos Llave en Mano -->
+				<div class="lg:col-span-7 bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 relative overflow-hidden backdrop-glass serv-card">
+					<div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+						<i class="ph-fill ph-blueprint text-9xl text-accent"></i>
+					</div>
+					<h3 class="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
+						<i class="ph-duotone ph-buildings text-accent"></i>
+						Proyectos Llave en Mano (EPC)
+					</h3>
+					
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mb-8">
+						<ul class="space-y-3">
+							<li class="flex items-start gap-2"><i class="ph-bold ph-check text-accent mt-1"></i> <span class="text-gray-300 text-sm">Diseño conceptual</span></li>
+							<li class="flex items-start gap-2"><i class="ph-bold ph-check text-accent mt-1"></i> <span class="text-gray-300 text-sm">Ingeniería básica y de detalle</span></li>
+							<li class="flex items-start gap-2"><i class="ph-bold ph-check text-accent mt-1"></i> <span class="text-gray-300 text-sm">Trámite de permisos</span></li>
+							<li class="flex items-start gap-2"><i class="ph-bold ph-check text-accent mt-1"></i> <span class="text-gray-300 text-sm">Obra Civil y Mecánica</span></li>
+							<li class="flex items-start gap-2"><i class="ph-bold ph-check text-accent mt-1"></i> <span class="text-gray-300 text-sm">Obra Eléctrica</span></li>
+						</ul>
+						<ul class="space-y-3">
+							<li class="flex items-start gap-2"><i class="ph-bold ph-check text-accent mt-1"></i> <span class="text-gray-300 text-sm">Instalación y control</span></li>
+							<li class="flex items-start gap-2"><i class="ph-bold ph-check text-accent mt-1"></i> <span class="text-gray-300 text-sm">Suministro de equipo y material</span></li>
+							<li class="flex items-start gap-2"><i class="ph-bold ph-check text-accent mt-1"></i> <span class="text-gray-300 text-sm">Comisionamiento y puesta en marcha</span></li>
+							<li class="flex items-start gap-2"><i class="ph-bold ph-check text-accent mt-1"></i> <span class="text-gray-300 text-sm">Partes de repuesto</span></li>
+							<li class="flex items-start gap-2"><i class="ph-bold ph-check text-accent mt-1"></i> <span class="text-gray-300 text-sm">Entrenamiento técnico</span></li>
+						</ul>
+					</div>
+					
+					<div class="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full text-accent text-sm font-medium">
+						<i class="ph-fill ph-info"></i> Ideal para: Bodegas, manufactura y hospitales.
+					</div>
+				</div>
+
+				<!-- Tarjetas Secundarias -->
+				<div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+					<div class="backdrop-glass p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-colors serv-card">
+						<h4 class="text-xl font-bold mb-3 flex items-center gap-2"><i class="ph-duotone ph-shopping-cart text-accent"></i> Venta y Renta de Equipo</h4>
+						<p class="text-gray-400 text-sm">Chillers de Absorción, Equipos VRF, Torres de enfriamiento y Sistemas de Bombeo.</p>
+					</div>
+					<div class="backdrop-glass p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-colors serv-card">
+						<h4 class="text-xl font-bold mb-3 flex items-center gap-2"><i class="ph-duotone ph-wrench text-accent"></i> Mantenimiento Especializado</h4>
+						<p class="text-gray-400 text-sm">Servicio preventivo, Servicio correctivo, Pólizas de mantenimiento, Coberturas de garantía.</p>
+					</div>
+					<div class="backdrop-glass p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-colors sm:col-span-2 lg:col-span-1 serv-card">
+						<h4 class="text-xl font-bold mb-3 flex items-center gap-2"><i class="ph-duotone ph-nut text-accent"></i> Refacciones Originales</h4>
+						<p class="text-gray-400 text-sm">Accesorios de sistemas hidrónicos, Refacciones para chillers, VRF y torres de enfriamiento.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 4. VALIDACIÓN: INDUSTRIAS Y MARCAS (E-E-A-T) -->
+	<section class="py-16 bg-white overflow-hidden border-b border-gray-100">
+		<div class="container mx-auto px-6 mb-12">
+			<div class="flex flex-wrap justify-center gap-3 md:gap-4 industries-badges">
+				<span class="px-5 py-2.5 rounded-full bg-primary/10 text-primary font-semibold text-sm">Manufactura</span>
+				<span class="px-5 py-2.5 rounded-full bg-primary/10 text-primary font-semibold text-sm">Hospitales</span>
+				<span class="px-5 py-2.5 rounded-full bg-primary/10 text-primary font-semibold text-sm">Escuelas</span>
+				<span class="px-5 py-2.5 rounded-full bg-primary/10 text-primary font-semibold text-sm">Retail</span>
+				<span class="px-5 py-2.5 rounded-full bg-primary/10 text-primary font-semibold text-sm">Oficinas</span>
+				<span class="px-5 py-2.5 rounded-full bg-primary/10 text-primary font-semibold text-sm">Centros comerciales</span>
+				<span class="px-5 py-2.5 rounded-full bg-primary/10 text-primary font-semibold text-sm">Parques industriales</span>
+			</div>
+		</div>
+
+		<!-- Infinite Marquee para Clientes/Marcas -->
+		<div class="relative flex overflow-hidden group bg-white h-32 items-center border-t border-gray-100">
+			<!-- Track -->
+			<div class="animate-marquee whitespace-nowrap flex items-center shrink-0 w-max">
+				<!-- Set 1 -->
+				<img src="/clientes/deepblue.jpg" alt="Deepblue" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/giek.jpeg" alt="Giek" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/grad_group.png" alt="Grad Group" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/intensity.png" alt="Intensity" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/logo_vicot.jpg" alt="Vicot" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/panasonic.png" alt="Panasonic" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<!-- Set 2 -->
+				<img src="/clientes/deepblue.jpg" alt="Deepblue" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/giek.jpeg" alt="Giek" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/grad_group.png" alt="Grad Group" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/intensity.png" alt="Intensity" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/logo_vicot.jpg" alt="Vicot" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/panasonic.png" alt="Panasonic" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<!-- Set 3 -->
+				<img src="/clientes/deepblue.jpg" alt="Deepblue" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/giek.jpeg" alt="Giek" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/grad_group.png" alt="Grad Group" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/intensity.png" alt="Intensity" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/logo_vicot.jpg" alt="Vicot" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/panasonic.png" alt="Panasonic" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<!-- Set 4 -->
+				<img src="/clientes/deepblue.jpg" alt="Deepblue" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/giek.jpeg" alt="Giek" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/grad_group.png" alt="Grad Group" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/intensity.png" alt="Intensity" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/logo_vicot.jpg" alt="Vicot" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+				<img src="/clientes/panasonic.png" alt="Panasonic" class="h-16 w-auto mx-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 object-contain mix-blend-multiply" />
+			</div>
+		</div>
+	</section>
+
+	<!-- 5. FORMULARIO DE CONVERSIÓN -->
+	<section id="contacto" class="py-24 relative overflow-hidden flex items-center justify-center min-h-screen">
+		<!-- Deep gradient background -->
+		<div class="absolute inset-0 bg-secondary"></div>
+		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(0,210,255,0.15)_0%,rgba(10,25,47,1)_80%)]"></div>
+		
+		<div class="container mx-auto px-6 relative z-10 max-w-4xl form-container">
+			<div class="backdrop-glass p-8 md:p-14 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 relative overflow-hidden">
+				<!-- Decorative elements -->
+				<div class="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+				<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+				
+				<div class="text-center mb-10 relative z-10">
+					<h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Lleve la máxima eficiencia y ahorro energético a su industria hoy</h2>
+					<p class="text-xl text-accent font-semibold mb-4">¡Compártenos tus datos para cotizarte!</p>
+					<p class="text-gray-400 text-sm max-w-2xl mx-auto leading-relaxed">Somos una empresa 100% mexicana que busca constantemente presentar a nuestros clientes las tecnologías más eficientes y amigables con el medio ambiente con altos porcentajes de confiabilidad en la operación.</p>
+				</div>
+
+				<form class="relative z-10 space-y-6">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<div>
+							<label for="nombre" class="sr-only">Nombre</label>
+							<input type="text" id="nombre" placeholder="Nombre" class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md" required />
+						</div>
+						<div>
+							<label for="apellido" class="sr-only">Apellido</label>
+							<input type="text" id="apellido" placeholder="Apellido" class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md" required />
+						</div>
+					</div>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<div>
+							<label for="email" class="sr-only">Correo electrónico</label>
+							<input type="email" id="email" placeholder="Correo electrónico" class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md" required />
+						</div>
+						<div>
+							<label for="telefono" class="sr-only">Teléfono / Celular</label>
+							<input type="tel" id="telefono" placeholder="Teléfono / Celular" class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md" required />
+						</div>
+					</div>
+					<div>
+						<label for="mensaje" class="sr-only">Mensaje</label>
+						<textarea id="mensaje" rows="4" placeholder="Requerimiento técnico o mensaje..." class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md resize-none" required></textarea>
+					</div>
+					<div class="pt-4 text-center">
+						<button type="submit" class="w-full md:w-auto px-10 py-4 bg-accent text-secondary font-bold text-lg rounded-full hover:bg-white transition-all shadow-[0_0_20px_rgba(0,210,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] hover:scale-105 active:scale-95 cursor-pointer">
+							Enviar Requerimiento Técnico
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<style>
+		.animate-marquee {
+			animation: marquee 100s linear infinite;
+		}
+		.animate-marquee2 {
+			animation: marquee2 25s linear infinite;
+		}
+		@keyframes marquee {
+			0% { transform: translateX(0%); }
+			100% { transform: translateX(-100%); }
+		}
+		@keyframes marquee2 {
+			0% { transform: translateX(100%); }
+			100% { transform: translateX(0%); }
+		}
+	</style>
+
+	<!-- GSAP Page Specific Scripts -->
+	<script is:inline>
+		document.addEventListener('DOMContentLoaded', () => {
+			// Hero Section Animations
+			const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+			// Initial state setup for Hero
+			gsap.set('.hero-img', { scale: 1.15 });
+			gsap.set('.hero-tag', { y: 20, opacity: 0 });
+			gsap.set('.hero-title', { y: 40, opacity: 0 });
+			gsap.set('.hero-desc', { y: 30, opacity: 0 });
+			gsap.set('.hero-cta', { y: 30, opacity: 0 });
+
+			// Animate Hero in sequence
+			tl.to('.hero-img', { scale: 1, duration: 2.5, ease: 'power2.out' })
+			  .to('.hero-tag', { y: 0, opacity: 1, duration: 0.8 }, '-=1.8')
+			  .to('.hero-title', { y: 0, opacity: 1, duration: 1 }, '-=1.6')
+			  .to('.hero-desc', { y: 0, opacity: 1, duration: 0.8 }, '-=1.2')
+			  .to('.hero-cta', { y: 0, opacity: 1, duration: 0.8 }, '-=0.9');
+
+			// Soluciones Especializadas Animation
+			gsap.utils.toArray('.sol-card').forEach((card, i) => {
+				ScrollTrigger.create({
+					trigger: card,
+					start: 'top 85%',
+					animation: gsap.fromTo(card, 
+						{ y: 50, opacity: 0 }, 
+						{ y: 0, opacity: 1, duration: 0.8, ease: 'power2.out', delay: i * 0.2 }
+					)
+				});
+			});
+
+			// Equipamiento Animation (Stagger ascendente)
+			gsap.utils.toArray('.equip-card').forEach((card, i) => {
+				ScrollTrigger.create({
+					trigger: card,
+					start: 'top 85%',
+					animation: gsap.fromTo(card, 
+						{ y: 50, opacity: 0 }, 
+						{ y: 0, opacity: 1, duration: 0.6, ease: 'power2.out', delay: (i % 4) * 0.15 }
+					)
+				});
+			});
+
+			// Servicios Animation (Desplazamiento lateral y opacidad)
+			gsap.utils.toArray('.serv-card').forEach((card, i) => {
+				ScrollTrigger.create({
+					trigger: card,
+					start: 'top 85%',
+					animation: gsap.fromTo(card, 
+						{ x: i === 0 ? -50 : 50, opacity: 0 }, 
+						{ x: 0, opacity: 1, duration: 0.8, ease: 'power2.out', delay: i === 0 ? 0 : i * 0.15 }
+					)
+				});
+			});
+
+			// Form Container Animation
+			ScrollTrigger.create({
+				trigger: '.form-container',
+				start: 'top 80%',
+				animation: gsap.fromTo('.form-container', 
+					{ y: 60, opacity: 0, scale: 0.98 }, 
+					{ y: 0, opacity: 1, scale: 1, duration: 1, ease: 'power3.out' }
+				)
+			});
+		});
+	</script>
+</Layout>

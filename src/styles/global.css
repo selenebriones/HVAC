@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0F4C81;
+  --color-secondary: #0A192F;
+  --color-accent: #00D2FF;
+  --color-surface-glass: rgba(255, 255, 255, 0.03);
+  --font-sans: 'Outfit', 'Inter', system-ui, sans-serif;
+}
+
+@layer utilities {
+  .backdrop-glass {
+    background-color: var(--color-surface-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}

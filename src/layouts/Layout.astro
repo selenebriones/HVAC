@@ -1,0 +1,154 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { 
+  title, 
+  description = "MXHVAC - Líderes en soluciones de aire acondicionado industrial y sistemas VRF de alta eficiencia energética." 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
+		<meta name="author" content="MXHVAC" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- OpenGraph / SEO -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="es_MX" />
+		
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<title>{title}</title>
+
+		<!-- Google Fonts: Outfit -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		
+		<!-- Phosphor Icons -->
+		<script is:inline src="https://unpkg.com/@phosphor-icons/web"></script>
+	</head>
+	<body class="bg-secondary text-white font-sans antialiased min-h-screen flex flex-col selection:bg-accent selection:text-secondary">
+		
+		<!-- Minimalist Floating Header -->
+		<header class="fixed top-0 w-full z-50 bg-white shadow-sm border-b border-gray-100 transition-all duration-300" id="global-header">
+			<div class="container mx-auto px-6 h-20 flex items-center justify-between">
+				<!-- Logo -->
+				<a href="#" class="flex items-center">
+					<img src="/website_logo_transparent_background.png" alt="MXHVAC Logo" class="h-10 w-auto" />
+				</a>
+				
+				<!-- Desktop Menu -->
+				<nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+					<a href="#servicios" class="hover:text-primary transition-colors">Servicios</a>
+					<a href="#soluciones-especializadas" class="hover:text-primary transition-colors">Sistemas VRF</a>
+					<a href="#equipamiento" class="hover:text-primary transition-colors">Proyectos</a>
+					<a href="#contacto" class="hover:text-primary transition-colors">Nosotros</a>
+				</nav>
+				
+				<!-- CTA & Mobile Toggle -->
+				<div class="flex items-center gap-4">
+					<a href="#contacto" class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-accent text-secondary font-semibold rounded-full hover:bg-primary hover:text-white transition-colors shadow-[0_0_15px_rgba(0,210,255,0.3)]">
+						Solicitar Cotización
+					</a>
+					<button class="md:hidden text-2xl text-secondary p-2" aria-label="Menú">
+						<i class="ph ph-list"></i>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main Content Area -->
+		<main class="flex-grow pt-20">
+			<slot />
+		</main>
+
+		<!-- Corporate Footer -->
+		<footer class="bg-[#050d1a] border-t border-white/5 pt-16 pb-8 mt-auto">
+			<div class="container mx-auto px-6">
+				<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+					<div class="md:col-span-2">
+						<a href="#" class="inline-block mb-6">
+							<img src="/website_logo_transparent_background.png" alt="MXHVAC Logo" class="h-12 w-auto brightness-0 invert" />
+						</a>
+						<p class="text-gray-400 text-sm max-w-sm leading-relaxed mb-6">
+							Especialistas en climatización industrial y sistemas de volumen de refrigerante variable (VRF) de máxima eficiencia.
+						</p>
+					</div>
+					
+					<div>
+						<h4 class="text-white font-semibold mb-4">Navegación</h4>
+						<ul class="space-y-2 text-sm text-gray-400">
+							<li><a href="#servicios" class="hover:text-accent transition-colors">Servicios</a></li>
+							<li><a href="#soluciones-especializadas" class="hover:text-accent transition-colors">Sistemas VRF</a></li>
+							<li><a href="#equipamiento" class="hover:text-accent transition-colors">Proyectos</a></li>
+							<li><a href="#contacto" class="hover:text-accent transition-colors">Nosotros</a></li>
+						</ul>
+					</div>
+					
+					<div>
+						<h4 class="text-white font-semibold mb-4">Contacto</h4>
+						<ul class="space-y-3 text-sm text-gray-400">
+							<li class="flex items-center gap-2 hover:text-white transition-colors cursor-pointer"><i class="ph ph-envelope-simple text-accent"></i> contacto@mxhvac.com</li>
+							<li class="flex items-center gap-2 hover:text-white transition-colors cursor-pointer"><i class="ph ph-phone text-accent"></i> 81-2261-5492</li>
+							<li class="flex items-start gap-2 hover:text-white transition-colors cursor-pointer"><i class="ph ph-map-pin text-accent mt-1"></i> Durazno #3122 Col. Moderna Monterrey N.L. 64530.</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+					<p>&copy; 2026 MXHVAC. Todos los derechos reservados.</p>
+					<div class="flex gap-4">
+						<a href="#" class="hover:text-gray-300 transition-colors">Aviso de Privacidad</a>
+						<a href="#" class="hover:text-gray-300 transition-colors">Términos y Condiciones</a>
+					</div>
+
+				</div>
+			</div>
+		</footer>
+
+		<!-- GSAP & ScrollTrigger -->
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+		<!-- Global Scripts Initialization -->
+		<script is:inline>
+			document.addEventListener('DOMContentLoaded', () => {
+				// Initialize ScrollTrigger
+				gsap.registerPlugin(ScrollTrigger);
+
+				// Basic Header Animation on Scroll
+				const header = document.getElementById('global-header');
+				let lastScrollY = window.scrollY;
+
+				window.addEventListener('scroll', () => {
+					if (window.scrollY > 50) {
+						if (window.scrollY > lastScrollY) {
+							// Scrolling down
+							gsap.to(header, { y: '-100%', duration: 0.3, ease: 'power2.out' });
+						} else {
+							// Scrolling up
+							gsap.to(header, { y: '0%', duration: 0.3, ease: 'power2.out' });
+						}
+					} else {
+						// At the top
+						gsap.to(header, { y: '0%', duration: 0.3, ease: 'power2.out' });
+					}
+					lastScrollY = window.scrollY;
+				});
+				
+				// Here goes the rest of the GSAP initializations for the landing page elements
+			});
+		</script>
+	</body>
+</html>
