@@ -192,47 +192,75 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 
 			<div class="flex flex-wrap justify-center gap-6 equipamiento-grid">
-				<!-- Tarjetas sin fondo de imagen -->
-				<div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-accent/30 transition-all duration-300 equip-card group flex flex-col justify-start">
-					<i class="ph-duotone ph-wind text-4xl text-accent mb-6"></i>
-					<h3 class="text-xl font-bold mb-3 text-secondary group-hover:text-accent transition-colors">Unidades interiores para Tecnología VRF</h3>
-					<p class="text-gray-600 text-sm leading-relaxed">Variedad de evaporadoras industriales de alta eficiencia adaptables a cualquier espacio arquitectónico.</p>
+				<!-- Tarjetas con fondo de imagen y anchos calculados para centrado -->
+				<div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] relative p-8 rounded-xl shadow-sm hover:shadow-lg hover:border-accent border border-transparent transition-all duration-300 equip-card group overflow-hidden min-h-[320px] flex flex-col justify-end">
+					<img src="/soluciones_equipamiento/e1.png" alt="Unidades interiores VRF" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20">
+						<i class="ph-duotone ph-wind text-4xl text-accent mb-4 group-hover:-translate-y-1 transition-transform"></i>
+						<h3 class="text-xl font-bold mb-2 text-white">Unidades interiores para Tecnología VRF</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">Variedad de evaporadoras industriales de alta eficiencia adaptables a cualquier espacio arquitectónico.</p>
+					</div>
 				</div>
 
-				<div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-accent/30 transition-all duration-300 equip-card group flex flex-col justify-start">
-					<i class="ph-duotone ph-drop text-4xl text-accent mb-6"></i>
-					<h3 class="text-xl font-bold mb-3 text-secondary group-hover:text-accent transition-colors">Unidades interiores para agua helada</h3>
-					<p class="text-gray-600 text-sm leading-relaxed">Equipos terminales (Fan & Coils y manejadoras compactas) diseñados para operar con sistema de agua helada.</p>
+				<div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] relative p-8 rounded-xl shadow-sm hover:shadow-lg hover:border-accent border border-transparent transition-all duration-300 equip-card group overflow-hidden min-h-[320px] flex flex-col justify-end">
+					<img src="/soluciones_equipamiento/e2.png" alt="Unidades agua helada" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20">
+						<i class="ph-duotone ph-drop text-4xl text-accent mb-4 group-hover:-translate-y-1 transition-transform"></i>
+						<h3 class="text-xl font-bold mb-2 text-white">Unidades interiores para agua helada</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">Equipos terminales (Fan & Coils y manejadoras compactas) diseñados para operar con sistema de agua helada.</p>
+					</div>
 				</div>
 
-				<div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-accent/30 transition-all duration-300 equip-card group flex flex-col justify-start">
-					<i class="ph-duotone ph-fan text-4xl text-accent mb-6"></i>
-					<h3 class="text-xl font-bold mb-3 text-secondary group-hover:text-accent transition-colors">Manejadoras de aire</h3>
-					<p class="text-gray-600 text-sm leading-relaxed">Unidades de tratamiento de aire a gran escala para asegurar la calidad del aire y ventilación en HVAC para manufactura.</p>
+				<div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] relative p-8 rounded-xl shadow-sm hover:shadow-lg hover:border-accent border border-transparent transition-all duration-300 equip-card group overflow-hidden min-h-[320px] flex flex-col justify-end">
+					<img src="/soluciones_equipamiento/e3.png" alt="Manejadoras de aire" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20">
+						<i class="ph-duotone ph-fan text-4xl text-accent mb-4 group-hover:-translate-y-1 transition-transform"></i>
+						<h3 class="text-xl font-bold mb-2 text-white">Manejadoras de aire</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">Unidades de tratamiento de aire a gran escala para asegurar la calidad del aire y ventilación en HVAC para manufactura.</p>
+					</div>
 				</div>
 
-				<div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-accent/30 transition-all duration-300 equip-card group flex flex-col justify-start">
-					<i class="ph-duotone ph-engine text-4xl text-accent mb-6"></i>
-					<h3 class="text-xl font-bold mb-3 text-secondary group-hover:text-accent transition-colors">Sistemas de bombeo</h3>
-					<p class="text-gray-600 text-sm leading-relaxed">Estaciones hidrónicas de bombeo optimizadas con variadores de velocidad para un transporte eficiente del agua.</p>
+				<div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] relative p-8 rounded-xl shadow-sm hover:shadow-lg hover:border-accent border border-transparent transition-all duration-300 equip-card group overflow-hidden min-h-[320px] flex flex-col justify-end">
+					<img src="/soluciones_equipamiento/e4.png" alt="Sistemas de bombeo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20">
+						<i class="ph-duotone ph-engine text-4xl text-accent mb-4 group-hover:-translate-y-1 transition-transform"></i>
+						<h3 class="text-xl font-bold mb-2 text-white">Sistemas de bombeo</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">Estaciones hidrónicas de bombeo optimizadas con variadores de velocidad para un transporte eficiente del agua.</p>
+					</div>
 				</div>
 
-				<div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-accent/30 transition-all duration-300 equip-card group flex flex-col justify-start">
-					<i class="ph-duotone ph-thermometer text-4xl text-accent mb-6"></i>
-					<h3 class="text-xl font-bold mb-3 text-secondary group-hover:text-accent transition-colors">Torres de enfriamiento</h3>
-					<p class="text-gray-600 text-sm leading-relaxed">Suministramos torres de refrigeración y la clásica torre de enfriamiento de agua industrial para la disipación eficiente.</p>
+				<div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] relative p-8 rounded-xl shadow-sm hover:shadow-lg hover:border-accent border border-transparent transition-all duration-300 equip-card group overflow-hidden min-h-[320px] flex flex-col justify-end">
+					<img src="/soluciones_equipamiento/e5.png" alt="Torres de enfriamiento" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20">
+						<i class="ph-duotone ph-thermometer text-4xl text-accent mb-4 group-hover:-translate-y-1 transition-transform"></i>
+						<h3 class="text-xl font-bold mb-2 text-white">Torres de enfriamiento</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">Suministramos torres de refrigeración y la clásica torre de enfriamiento de agua industrial para la disipación eficiente.</p>
+					</div>
 				</div>
 
-				<div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-accent/30 transition-all duration-300 equip-card group flex flex-col justify-start">
-					<i class="ph-duotone ph-arrows-out text-4xl text-accent mb-6"></i>
-					<h3 class="text-xl font-bold mb-3 text-secondary group-hover:text-accent transition-colors">Tanques de expansión</h3>
-					<p class="text-gray-600 text-sm leading-relaxed">Dispositivos esenciales para absorber las variaciones de presión y garantizar la seguridad en redes hidrónicas cerradas.</p>
+				<div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] relative p-8 rounded-xl shadow-sm hover:shadow-lg hover:border-accent border border-transparent transition-all duration-300 equip-card group overflow-hidden min-h-[320px] flex flex-col justify-end">
+					<img src="/soluciones_equipamiento/e6.png" alt="Tanques de expansión" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20">
+						<i class="ph-duotone ph-arrows-out text-4xl text-accent mb-4 group-hover:-translate-y-1 transition-transform"></i>
+						<h3 class="text-xl font-bold mb-2 text-white">Tanques de expansión</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">Dispositivos esenciales para absorber las variaciones de presión y garantizar la seguridad en redes hidrónicas cerradas.</p>
+					</div>
 				</div>
 
-				<div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-accent/30 transition-all duration-300 equip-card group flex flex-col justify-start">
-					<i class="ph-duotone ph-faders text-4xl text-accent mb-6"></i>
-					<h3 class="text-xl font-bold mb-3 text-secondary group-hover:text-accent transition-colors">Válvulas multipropósito</h3>
-					<p class="text-gray-600 text-sm leading-relaxed">Componentes avanzados de balanceo dinámico, regulación y aislamiento del flujo de fluidos.</p>
+				<div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] relative p-8 rounded-xl shadow-sm hover:shadow-lg hover:border-accent border border-transparent transition-all duration-300 equip-card group overflow-hidden min-h-[320px] flex flex-col justify-end">
+					<img src="/soluciones_equipamiento/e7.png" alt="Válvulas multipropósito" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+					<div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+					<div class="relative z-20">
+						<i class="ph-duotone ph-faders text-4xl text-accent mb-4 group-hover:-translate-y-1 transition-transform"></i>
+						<h3 class="text-xl font-bold mb-2 text-white">Válvulas multipropósito</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">Componentes avanzados de balanceo dinámico, regulación y aislamiento del flujo de fluidos.</p>
+					</div>
 				</div>
 			</div>
 		</div>
