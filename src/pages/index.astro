@@ -18,7 +18,7 @@ import Layout from '../layouts/Layout.astro';
 				Sistema HVAC y <br/>Climatización Industrial
 			</h1>
 			<p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-10 max-w-3xl mx-auto hero-desc">
-				Implementamos sistemas de aire acondicionado industrial y proyectos llave en mano con tecnología VRF a gas natural, garantizando alta eficiencia, sustentabilidad y continuidad operativa con generación eléctrica en sitio.
+				Implementamos sistemas de aire acondicionado industrial y proyectos llave en mano con tecnología alternativa a gas natural, garantizando alta eficiencia, sustentabilidad y continuidad operativa con generación eléctrica en sitio.
 			</p>
 			<div class="flex flex-col sm:flex-row gap-5 hero-cta justify-center w-full">
 				<a href="#contacto" class="inline-flex items-center justify-center px-8 py-4 bg-accent text-secondary font-bold rounded-full hover:bg-white transition-all shadow-[0_0_20px_rgba(0,210,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] hover:-translate-y-1 group">
@@ -53,14 +53,14 @@ import Layout from '../layouts/Layout.astro';
 								<i class="ph-bold ph-lightning text-accent mt-1 shrink-0"></i>
 								<div>
 									<span class="font-semibold text-white block">Fuente primaria de energía:</span>
-									<span class="text-gray-300 text-sm">Operación altamente eficiente mediante Fuego Directo, Agua Caliente, Vapor y Gases Calientes de Proceso.</span>
+									<span class="text-gray-300 text-sm">Sustituye el consumo de energía eléctrica como fuente energética por gas natural o con la reutilización de energía residual de procesos como por ejemplo: agua caliente, vapor o gases calientes de combustión.</span>
 								</div>
 							</li>
 							<li class="flex items-start gap-3">
 								<i class="ph-bold ph-chart-line-down text-accent mt-1 shrink-0"></i>
 								<div>
 									<span class="font-semibold text-white block">Ahorro de energía radical:</span>
-									<span class="text-gray-300 text-sm">Reduce drásticamente la demanda de capacidad eléctrica industrial al sustituir electricidad por energía térmica.</span>
+									<span class="text-gray-300 text-sm">El costo de operación es 40% más barato con la utilización de cualquiera de nuestras tecnologías.</span>
 								</div>
 							</li>
 							<li class="flex items-start gap-3">
@@ -74,7 +74,7 @@ import Layout from '../layouts/Layout.astro';
 								<i class="ph-bold ph-arrows-merge text-accent mt-1 shrink-0"></i>
 								<div>
 									<span class="font-semibold text-white block">Versatilidad térmica:</span>
-									<span class="text-gray-300 text-sm">Permite el aprovechamiento de calor residual de procesos de manufactura para generar agua helada.</span>
+									<span class="text-gray-300 text-sm">Permite el aprovechamiento de calor residual de procesos de manufactura o de generación eléctrica en sitio para generar agua helada.</span>
 								</div>
 							</li>
 						</ul>
@@ -310,7 +310,7 @@ import Layout from '../layouts/Layout.astro';
 				<!-- Tarjetas Secundarias -->
 				<div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
 					<div class="backdrop-glass p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-colors serv-card">
-						<h4 class="text-xl font-bold mb-3 flex items-center gap-2"><i class="ph-duotone ph-shopping-cart text-accent"></i> Venta y Renta de Equipo</h4>
+						<h4 class="text-xl font-bold mb-3 flex items-center gap-2"><i class="ph-duotone ph-shopping-cart text-accent"></i> Venta de Equipo</h4>
 						<p class="text-gray-400 text-sm">Chillers de Absorción, Equipos VRF, Torres de enfriamiento y Sistemas de Bombeo.</p>
 					</div>
 					<div class="backdrop-glass p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-colors serv-card">
@@ -327,7 +327,7 @@ import Layout from '../layouts/Layout.astro';
 	</section>
 
 	<!-- 4. VALIDACIÓN: INDUSTRIAS Y MARCAS (E-E-A-T) -->
-	<section class="py-16 bg-white overflow-hidden border-b border-gray-100">
+	<section class="pt-16 bg-white overflow-hidden border-b border-gray-100">
 		<div class="container mx-auto px-6 mb-12">
 			<div class="flex flex-wrap justify-center gap-3 md:gap-4 industries-badges">
 				<span class="px-5 py-2.5 rounded-full bg-primary/10 text-primary font-semibold text-sm">Manufactura</span>
@@ -377,7 +377,7 @@ import Layout from '../layouts/Layout.astro';
 	</section>
 
 	<!-- 5. FORMULARIO DE CONVERSIÓN -->
-	<section id="contacto" class="py-24 relative overflow-hidden flex items-center justify-center min-h-screen">
+	<section id="contacto" class="py-24 relative overflow-hidden flex items-center justify-center">
 		<!-- Deep gradient background -->
 		<div class="absolute inset-0 bg-secondary"></div>
 		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(0,210,255,0.15)_0%,rgba(10,25,47,1)_80%)]"></div>
@@ -431,14 +431,14 @@ import Layout from '../layouts/Layout.astro';
 
 	<style>
 		.animate-marquee {
-			animation: marquee 100s linear infinite;
+			animation: marquee 40s linear infinite;
 		}
 		.animate-marquee2 {
 			animation: marquee2 25s linear infinite;
 		}
 		@keyframes marquee {
 			0% { transform: translateX(0%); }
-			100% { transform: translateX(-100%); }
+			100% { transform: translateX(-50%); }
 		}
 		@keyframes marquee2 {
 			0% { transform: translateX(100%); }
