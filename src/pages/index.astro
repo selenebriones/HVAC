@@ -523,11 +523,9 @@ import Layout from '../layouts/Layout.astro';
 		const modalMessage = document.getElementById('contact-modal-message');
 		const submitButton = form?.querySelector('button[type="submit"]');
 
-		function openModal({ success, title, message }: { success: boolean; title: string; message: string }) {
+		function showErrorModal(title: string, message: string) {
 			if (!modal || !modalIcon || !modalTitle || !modalMessage) return;
-			modalIcon.className = success
-				? 'ph-bold ph-check-circle text-5xl text-accent mb-4'
-				: 'ph-bold ph-x-circle text-5xl text-red-400 mb-4';
+			modalIcon.className = 'ph-bold ph-x-circle text-5xl text-red-400 mb-4';
 			modalTitle.textContent = title;
 			modalMessage.textContent = message;
 			modal.classList.remove('hidden');
@@ -569,26 +567,14 @@ import Layout from '../layouts/Layout.astro';
 				const result = await response.json();
 
 				if (response.ok && result.success) {
-					form.reset();
-					openModal({
-						success: true,
-						title: '¡Gracias por contactarnos!',
-						message: 'Hemos recibido tu mensaje. En breve un asesor se comunicará contigo.',
-					});
-				} else {
-					openModal({
-						success: false,
-						title: 'No se pudo enviar tu mensaje',
-						message: result.message || 'Ocurrió un error. Por favor, inténtalo de nuevo.',
-					});
+					window.location.href = '/gracias';
+					return;
 				}
+
+				showErrorModal('No se pudo enviar tu mensaje', result.message || 'Ocurrió un error. Por favor, inténtalo de nuevo.');
 			} catch (error) {
 				console.error('Error al enviar el formulario de contacto:', error);
-				openModal({
-					success: false,
-					title: 'No se pudo enviar tu mensaje',
-					message: 'Ocurrió un error de conexión. Por favor, inténtalo de nuevo.',
-				});
+				showErrorModal('No se pudo enviar tu mensaje', 'Ocurrió un error de conexión. Por favor, inténtalo de nuevo.');
 			} finally {
 				if (submitButton instanceof HTMLButtonElement) {
 					submitButton.disabled = false;
