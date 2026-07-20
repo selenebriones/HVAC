@@ -16,3 +16,15 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
 }
+
+/* Widget de chatbot Conversia: se inyecta en el DOM sin definir su propio
+   color de texto, por lo que hereda el text-white del body y el input
+   queda invisible sobre su fondo blanco. */
+.chatbot .chat-input,
+.chatbot .chat-input textarea {
+  color: #1f2937;
+}
+
+.chatbot .chat-input textarea::placeholder {
+  color: #6b7280;
+}

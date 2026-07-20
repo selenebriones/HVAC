@@ -376,37 +376,54 @@ import Layout from '../layouts/Layout.astro';
 					<p class="text-gray-400 text-sm max-w-2xl mx-auto leading-relaxed">Somos una empresa 100% mexicana que busca constantemente presentar a nuestros clientes las tecnologías más eficientes y amigables con el medio ambiente con altos porcentajes de confiabilidad en la operación.</p>
 				</div>
 
-				<form class="relative z-10 space-y-6">
+				<form id="contact-form" class="relative z-10 space-y-6">
+					<div class="absolute -left-[9999px] top-0 h-0 w-0 overflow-hidden" aria-hidden="true">
+						<label for="empresa_web">No llenar este campo</label>
+						<input type="text" id="empresa_web" name="empresa_web" tabindex="-1" autocomplete="off" />
+					</div>
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 						<div>
 							<label for="nombre" class="sr-only">Nombre</label>
-							<input type="text" id="nombre" placeholder="Nombre" class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md" required />
+							<input type="text" id="nombre" name="nombre" placeholder="Nombre" class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md" required />
 						</div>
 						<div>
 							<label for="apellido" class="sr-only">Apellido</label>
-							<input type="text" id="apellido" placeholder="Apellido" class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md" required />
+							<input type="text" id="apellido" name="apellido" placeholder="Apellido" class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md" required />
 						</div>
 					</div>
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 						<div>
 							<label for="email" class="sr-only">Correo electrónico</label>
-							<input type="email" id="email" placeholder="Correo electrónico" class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md" required />
+							<input type="email" id="email" name="email" placeholder="Correo electrónico" class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md" required />
 						</div>
 						<div>
 							<label for="telefono" class="sr-only">Teléfono / Celular</label>
-							<input type="tel" id="telefono" placeholder="Teléfono / Celular" class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md" required />
+							<input type="tel" id="telefono" name="telefono" placeholder="Teléfono / Celular" class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md" required />
 						</div>
 					</div>
 					<div>
 						<label for="mensaje" class="sr-only">Mensaje</label>
-						<textarea id="mensaje" rows="4" placeholder="Requerimiento técnico o mensaje..." class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md resize-none" required></textarea>
+						<textarea id="mensaje" name="mensaje" rows="4" placeholder="Requerimiento técnico o mensaje..." class="w-full bg-white/5 border-b border-white/20 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors rounded-t-md resize-none" required></textarea>
 					</div>
 					<div class="pt-4 text-center">
-						<button type="submit" class="w-full md:w-auto px-10 py-4 bg-[#2e5eb3] text-white font-bold text-lg rounded-full hover:bg-white hover:text-[#2e5eb3] transition-all shadow-[0_0_20px_rgba(46,94,179,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] hover:scale-105 active:scale-95 cursor-pointer">
+						<button type="submit" class="w-full md:w-auto px-10 py-4 bg-[#2e5eb3] text-white font-bold text-lg rounded-full hover:bg-white hover:text-[#2e5eb3] transition-all shadow-[0_0_20px_rgba(46,94,179,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] hover:scale-105 active:scale-95 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100">
 							Enviar
 						</button>
 					</div>
 				</form>
+			</div>
+		</div>
+
+		<!-- Modal de resultado del envío -->
+		<div id="contact-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+			<div class="absolute inset-0 bg-black/70 backdrop-blur-sm" data-modal-close></div>
+			<div class="relative backdrop-glass border border-white/10 rounded-3xl p-8 md:p-10 max-w-md w-full text-center shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+				<i id="contact-modal-icon" class="text-5xl mb-4"></i>
+				<h3 id="contact-modal-title" class="text-2xl font-bold text-white mb-2"></h3>
+				<p id="contact-modal-message" class="text-gray-300 mb-6"></p>
+				<button type="button" data-modal-close class="px-8 py-3 bg-accent text-secondary font-bold rounded-full hover:bg-white transition-all cursor-pointer">
+					Cerrar
+				</button>
 			</div>
 		</div>
 	</section>
@@ -488,11 +505,91 @@ import Layout from '../layouts/Layout.astro';
 			ScrollTrigger.create({
 				trigger: '.form-container',
 				start: 'top 80%',
-				animation: gsap.fromTo('.form-container', 
-					{ y: 60, opacity: 0, scale: 0.98 }, 
+				animation: gsap.fromTo('.form-container',
+					{ y: 60, opacity: 0, scale: 0.98 },
 					{ y: 0, opacity: 1, scale: 1, duration: 1, ease: 'power3.out' }
 				)
 			});
+		});
+	</script>
+
+	<!-- Contact Form Submission -->
+	<script>
+		const formLoadedAt = Date.now();
+		const form = document.getElementById('contact-form');
+		const modal = document.getElementById('contact-modal');
+		const modalIcon = document.getElementById('contact-modal-icon');
+		const modalTitle = document.getElementById('contact-modal-title');
+		const modalMessage = document.getElementById('contact-modal-message');
+		const submitButton = form?.querySelector('button[type="submit"]');
+
+		function showErrorModal(title: string, message: string) {
+			if (!modal || !modalIcon || !modalTitle || !modalMessage) return;
+			modalIcon.className = 'ph-bold ph-x-circle text-5xl text-red-400 mb-4';
+			modalTitle.textContent = title;
+			modalMessage.textContent = message;
+			modal.classList.remove('hidden');
+			modal.classList.add('flex');
+		}
+
+		function closeModal() {
+			modal?.classList.add('hidden');
+			modal?.classList.remove('flex');
+		}
+
+		modal?.querySelectorAll('[data-modal-close]').forEach((el) => {
+			el.addEventListener('click', closeModal);
+		});
+
+		form?.addEventListener('submit', async (event) => {
+			event.preventDefault();
+			if (!(form instanceof HTMLFormElement)) return;
+
+			const payload = {
+				...Object.fromEntries(new FormData(form).entries()),
+				pageUrl: window.location.href,
+				loadedAt: String(formLoadedAt),
+			};
+			const originalButtonText = submitButton?.textContent ?? 'Enviar';
+
+			if (submitButton instanceof HTMLButtonElement) {
+				submitButton.disabled = true;
+				submitButton.textContent = 'Enviando...';
+			}
+
+			try {
+				const response = await fetch('/api/contact', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(payload),
+				});
+
+				const result = await response.json();
+
+				if (response.ok && result.success) {
+					window.location.href = '/gracias';
+					return;
+				}
+
+				showErrorModal('No se pudo enviar tu mensaje', result.message || 'Ocurrió un error. Por favor, inténtalo de nuevo.');
+			} catch (error) {
+				console.error('Error al enviar el formulario de contacto:', error);
+				showErrorModal('No se pudo enviar tu mensaje', 'Ocurrió un error de conexión. Por favor, inténtalo de nuevo.');
+			} finally {
+				if (submitButton instanceof HTMLButtonElement) {
+					submitButton.disabled = false;
+					submitButton.textContent = originalButtonText;
+				}
+			}
+		});
+	</script>
+
+	<!-- Conversia Chatbot -->
+	<script is:inline src="https://conversia.com.mx/assets/js/chatbot.js" id="chatbot-js"></script>
+	<script is:inline>
+		CHATKODEX.init({
+			host: window.location.host,
+			key: 'NDNMEzI796Uc4'
 		});
 	</script>
 </Layout>
