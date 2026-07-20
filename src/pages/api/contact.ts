@@ -6,7 +6,7 @@ const BREVO_API_URL = 'https://api.brevo.com/v3/smtp/email';
 
 const SENDER_EMAIL = 'noreply@futurite.info';
 const SENDER_NAME = 'Contacto Sistemas HVAC';
-const RECIPIENT_EMAIL = 'dev@futurite.com';
+const RECIPIENT_EMAILS = ['dev@futurite.com', 'asistente@mxhvac.com'];
 const LEAD_SOURCE = 'Sistemas HVAC';
 const MIN_SUBMIT_MS = 2000;
 
@@ -118,7 +118,7 @@ export const POST: APIRoute = async ({ request }) => {
       },
       body: JSON.stringify({
         sender: { name: SENDER_NAME, email: SENDER_EMAIL },
-        to: [{ email: RECIPIENT_EMAIL }],
+        to: RECIPIENT_EMAILS.map((recipientEmail) => ({ email: recipientEmail })),
         replyTo: { email, name: `${nombre} ${apellido}` },
         subject: `Nuevo Lead: ${LEAD_SOURCE} - ${nombre} ${apellido}`,
         htmlContent,
