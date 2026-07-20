@@ -8,6 +8,7 @@ const SENDER_EMAIL = 'noreply@futurite.info';
 const SENDER_NAME = 'Contacto Sistemas HVAC';
 const RECIPIENT_EMAIL = 'dev@futurite.com';
 const LEAD_SOURCE = 'Sistemas HVAC';
+const MIN_SUBMIT_MS = 2000;
 
 function escapeHtml(value: string): string {
   return value
@@ -51,6 +52,18 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(
       JSON.stringify({ success: false, message: 'No se pudo enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.' }),
       { status: 400, headers: { 'Content-Type': 'application/json' } },
+    );
+  }
+
+  const honeypot = (data.empresa_web || '').trim();
+  const loadedAt = Number(data.loadedAt);
+  const elapsedMs = Date.now() - loadedAt;
+
+  if (honeypot || !loadedAt || elapsedMs < MIN_SUBMIT_MS) {
+    console.error(`[api/contact] Envío bloqueado por filtro anti-spam (honeypot: ${JSON.stringify(honeypot)}, elapsedMs: ${elapsedMs}).`);
+    return new Response(
+      JSON.stringify({ success: true }),
+      { status: 200, headers: { 'Content-Type': 'application/json' } },
     );
   }
 

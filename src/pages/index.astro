@@ -377,6 +377,10 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 
 				<form id="contact-form" class="relative z-10 space-y-6">
+					<div class="absolute -left-[9999px] top-0 h-0 w-0 overflow-hidden" aria-hidden="true">
+						<label for="empresa_web">No llenar este campo</label>
+						<input type="text" id="empresa_web" name="empresa_web" tabindex="-1" autocomplete="off" />
+					</div>
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 						<div>
 							<label for="nombre" class="sr-only">Nombre</label>
@@ -511,6 +515,7 @@ import Layout from '../layouts/Layout.astro';
 
 	<!-- Contact Form Submission -->
 	<script>
+		const formLoadedAt = Date.now();
 		const form = document.getElementById('contact-form');
 		const modal = document.getElementById('contact-modal');
 		const modalIcon = document.getElementById('contact-modal-icon');
@@ -542,7 +547,11 @@ import Layout from '../layouts/Layout.astro';
 			event.preventDefault();
 			if (!(form instanceof HTMLFormElement)) return;
 
-			const payload = { ...Object.fromEntries(new FormData(form).entries()), pageUrl: window.location.href };
+			const payload = {
+				...Object.fromEntries(new FormData(form).entries()),
+				pageUrl: window.location.href,
+				loadedAt: String(formLoadedAt),
+			};
 			const originalButtonText = submitButton?.textContent ?? 'Enviar';
 
 			if (submitButton instanceof HTMLButtonElement) {
