@@ -583,4 +583,13 @@ import Layout from '../layouts/Layout.astro';
 			}
 		});
 	</script>
+
+	<!-- Conversia Chatbot -->
+	<script is:inline src="https://conversia.com.mx/assets/js/chatbot.js" id="chatbot-js"></script>
+	<script is:inline>
+		CHATKODEX.init({
+			host: window.location.host,
+			key: 'NDNMEzI796Uc4'
+		});
+	</script>
 </Layout>
