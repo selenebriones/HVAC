@@ -516,6 +516,20 @@ import Layout from '../layouts/Layout.astro';
 	<!-- Contact Form Submission -->
 	<script>
 		const formLoadedAt = Date.now();
+
+		// Captura de parámetros de campaña (UTMs + gclid) al cargar la página,
+		// antes de que la navegación por anclas pueda alterar la URL.
+		const TRACKING_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'];
+		const trackingData: Record<string, string> = (() => {
+			const params = new URLSearchParams(window.location.search);
+			const result: Record<string, string> = {};
+			for (const key of TRACKING_PARAMS) {
+				const value = params.get(key);
+				if (value) result[key] = value;
+			}
+			return result;
+		})();
+
 		const form = document.getElementById('contact-form');
 		const modal = document.getElementById('contact-modal');
 		const modalIcon = document.getElementById('contact-modal-icon');
@@ -549,6 +563,7 @@ import Layout from '../layouts/Layout.astro';
 				...Object.fromEntries(new FormData(form).entries()),
 				pageUrl: window.location.href,
 				loadedAt: String(formLoadedAt),
+				tracking: trackingData,
 			};
 			const originalButtonText = submitButton?.textContent ?? 'Enviar';
 

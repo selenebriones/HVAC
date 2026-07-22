@@ -46,7 +46,7 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
 
-  let data: Record<string, string>;
+  let data: Record<string, any>;
   try {
     data = await request.json();
   } catch {
@@ -93,6 +93,15 @@ export const POST: APIRoute = async ({ request }) => {
   }
   const fechaRegistro = formatFechaRegistro(new Date());
 
+  // Parámetros de campaña (UTMs + gclid). Se toma solo lo permitido y se
+  // fuerza a string para no confiar ciegamente en lo que envía el cliente.
+  const TRACKING_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'];
+  const rawTracking = (data.tracking && typeof data.tracking === 'object') ? data.tracking : {};
+  const tracking: Record<string, string> = {};
+  for (const key of TRACKING_KEYS) {
+    if (rawTracking[key]) tracking[key] = String(rawTracking[key]).trim();
+  }
+
   const htmlContent = `
     <div style="font-family: Arial, Helvetica, sans-serif; color: #1f2937; max-width: 600px; margin: 0 auto;">
       <h2 style="color: #4b6a88; font-size: 24px; margin: 0 0 16px;">Nuevo Prospecto Registrado</h2>
@@ -125,6 +134,7 @@ export const POST: APIRoute = async ({ request }) => {
         mensaje,
         fechaRegistro,
         siteUrl,
+        tracking,
       }),
     });
 
