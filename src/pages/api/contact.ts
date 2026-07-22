@@ -36,9 +36,10 @@ function formatFechaRegistro(date: Date): string {
 
 export const POST: APIRoute = async ({ request }) => {
   const apiKey = import.meta.env.BREVO_API_KEY;
+  const webhookUrl = import.meta.env.N8N_WEBHOOK_URL;
 
-  if (!apiKey) {
-    console.error('[api/contact] Falta la variable de entorno BREVO_API_KEY.');
+  if (!apiKey || !webhookUrl) {
+    console.error('[api/contact] Faltan variables de entorno (BREVO_API_KEY y/o N8N_WEBHOOK_URL).');
     return new Response(
       JSON.stringify({ success: false, message: 'No se pudo enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.' }),
       { status: 500, headers: { 'Content-Type': 'application/json' } },
@@ -109,6 +110,34 @@ export const POST: APIRoute = async ({ request }) => {
   `;
 
   try {
+    // 1. Envío al webhook de n8n. Se hace primero para que, si está caído,
+    //    fallemos rápido sin haber disparado el correo (un reintento no genera
+    //    correos duplicados).
+    const webhookResponse = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        leadSource: LEAD_SOURCE,
+        nombre,
+        apellido,
+        email,
+        telefono,
+        mensaje,
+        fechaRegistro,
+        siteUrl,
+      }),
+    });
+
+    if (!webhookResponse.ok) {
+      const errorBody = await webhookResponse.text();
+      console.error(`[api/contact] n8n respondió con error ${webhookResponse.status}: ${errorBody}`);
+      return new Response(
+        JSON.stringify({ success: false, message: 'No se pudo enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.' }),
+        { status: 502, headers: { 'Content-Type': 'application/json' } },
+      );
+    }
+
+    // 2. Envío del correo vía Brevo.
     const response = await fetch(BREVO_API_URL, {
       method: 'POST',
       headers: {
@@ -139,7 +168,7 @@ export const POST: APIRoute = async ({ request }) => {
       { status: 200, headers: { 'Content-Type': 'application/json' } },
     );
   } catch (error) {
-    console.error('[api/contact] Error al conectar con Brevo:', error);
+    console.error('[api/contact] Error al procesar el envío del formulario:', error);
     return new Response(
       JSON.stringify({ success: false, message: 'No se pudo enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.' }),
       { status: 500, headers: { 'Content-Type': 'application/json' } },
