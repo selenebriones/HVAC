@@ -55,7 +55,7 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
 
-  const honeypot = (data.empresa_web || '').trim();
+  const honeypot = (data.contact_extra || '').trim();
   const loadedAt = Number(data.loadedAt);
   const elapsedMs = Date.now() - loadedAt;
 
