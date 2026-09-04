@@ -6,7 +6,7 @@ const BREVO_API_URL = 'https://api.brevo.com/v3/smtp/email';
 
 const SENDER_EMAIL = 'noreply@futurite.info';
 const SENDER_NAME = 'Contacto Sistemas HVAC';
-const RECIPIENT_EMAILS = ['dev@futurite.com', 'asistente@mxhvac.com'];
+const RECIPIENT_EMAILS = ['dev@futurite.com', 'asistente@mxhvac.com', 'ovarela@mxhvac.com'];
 const LEAD_SOURCE = 'Sistemas HVAC';
 const MIN_SUBMIT_MS = 2000;
 
